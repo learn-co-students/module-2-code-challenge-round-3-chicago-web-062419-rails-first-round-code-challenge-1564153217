@@ -4,4 +4,8 @@ class VendorsController < ApplicationController
     @vendors = Vendor.all
   end
 
+  def show
+    @vendor = Vendor.find_by(id: params[:id])
+  end
+
 end

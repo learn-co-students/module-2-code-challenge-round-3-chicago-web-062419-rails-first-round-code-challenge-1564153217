@@ -1,0 +1,9 @@
+<h1>Register a new Vendor</h1>
+
+<%= form_for(@vendor) do |f| %>
+	<%= f.label 'Name' %>
+	<%= f.text_area :name %>
+	<%= f.submit %>
+<% end %>
+
+<%= flash[:message] %>

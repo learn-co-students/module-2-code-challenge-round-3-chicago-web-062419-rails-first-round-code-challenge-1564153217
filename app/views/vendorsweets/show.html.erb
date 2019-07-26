@@ -1,0 +1,10 @@
+<%= link_to "Go Back", vendorsweets_path %><br>
+
+<h3>New Vendor Sweet</h3>
+<ul>
+    Price: $<%= @vendorsweet.price %><br>
+    Vendor: <%= @vendorsweet.vendor.name %><br>
+    Sweet: <%= @vendorsweet.sweet.name %><br>
+</ul>
+
+<%= link_to "Create Another?", new_vendorsweet_path %>

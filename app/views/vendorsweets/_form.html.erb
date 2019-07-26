@@ -1,0 +1,16 @@
+<font face="Alien League II">
+<%= form_for(@vendorsweet) do |f| %>
+
+  <p align="right"><%= f.label :choose_a_vendor %></p>
+  <p align="right"><%= f.collection_select( :vendor_id, Vendor.all, :id, :name )  %></p>
+
+  <p align="right"><%= f.label :choose_a_sweet %></p>
+  <p align="right"><%= f.collection_select( :sweet_id, Sweet.all, :id, :name )  %></p>
+
+  <p align="right"><%= f.label :set_your_price %></p>
+  <p align="right"><%= f.text_field :price %></p>
+
+  <p align="right"><%= f.submit :sweet %></p>
+
+<% end %>
+</font>

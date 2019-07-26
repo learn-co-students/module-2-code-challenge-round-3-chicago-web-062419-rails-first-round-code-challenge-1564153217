@@ -1,0 +1,13 @@
+<%= form_for :vendor_sweets do |f| %>
+  <%= f.label "Vendor" %>
+  <%= f.collection_select(:vendor, Vendor.all, :id, :name) %>
+  <br>
+  <%= f.label "Sweet" %>
+  <%= f.collection_select(:sweet, Sweet.all, :id, :name) %>
+  <br>
+  <%= f.label :price %>
+  <%= f.select :price, (1..30).map {|x| "$ #{x}"}%>
+  <br>
+  
+  <%= f.submit "Submit" %>
+<% end %>

@@ -1,0 +1,10 @@
+<h1>All Vendor Sweets</h1>
+
+<ul>
+  <% @vendorsweets.each do |vs| %>
+    <li><%= vs.vendor_id %></li>
+  <% end  %>
+</ul>
+
+<%# Creat a link to new form %>
+<%=link_to new_vendor_sweet_path%>

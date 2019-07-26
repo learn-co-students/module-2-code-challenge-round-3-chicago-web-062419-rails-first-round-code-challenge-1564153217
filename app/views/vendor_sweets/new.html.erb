@@ -1,0 +1,15 @@
+<h1>All Vendor Sweets</h1>
+
+<%= form_for @vendorsweet do |f| %>
+    <%= f.label :vendor_id %>:
+    <%= f.text_field :vendor_id %><br />
+
+    <%= f.label :sweet_id %>:
+    <%= f.text_field :sweet_id %><br />
+
+    <%= f.label :price %>:
+    <%= f.text_field :price %><br />
+
+
+    <%= f.submit %>
+<% end %>

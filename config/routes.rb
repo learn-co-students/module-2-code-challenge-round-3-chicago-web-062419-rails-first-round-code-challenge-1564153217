@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   get '/sweets', to: "sweets#index", as: "sweets"
   get '/vendors', to: "vendors#index", as: "vendors"
 
+  resources :vendors_sweets
+
 end

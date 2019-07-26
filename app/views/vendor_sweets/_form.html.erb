@@ -1,0 +1,26 @@
+
+<% if @vendorsweet.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@vendorsweet.errors.count, "error") %> prohibited this vendorsweet from being saved, please try again:</h2>
+ 
+    <ul>
+    <% @vendorsweet.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+<%= form_for @vendorsweet do |f| %>
+<h1><%= f.label :price %></h1>
+<p>$<%= f.text_field :price %> cents</p>
+
+<h2>Select Vendor:</h2>
+<%= f.collection_select :vendor_id, @vendors, :id, :name%>
+<h2>Select Sweet:</h2>
+<%= f.collection_select :sweet_id, @sweets, :id, :name%>
+
+<br><br>
+<%= f.submit "Let this vendor sell this sweet!"%>
+<% end %>

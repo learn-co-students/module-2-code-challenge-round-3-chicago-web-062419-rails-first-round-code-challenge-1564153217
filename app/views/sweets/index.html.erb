@@ -1,7 +1,7 @@
-<h1>All Sweets</h1>
-
+<h1>List of Available Sweets</h1>
+<img src="http://a1128.g.akamai.net/7/1128/497/0001/origin-d5.scene7.com/is/image/ProvideCommerce/joythebaker">
 <ul>
   <% @sweets.each do |sweet| %>
-    <li><%= sweet.name %></li>
+    <li><%= link_to sweet.name, sweet_path(sweet) %></li>
   <% end  %>
 </ul>

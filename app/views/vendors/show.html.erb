@@ -1,0 +1,14 @@
+<h1>Vendor: <%= @vendor.name %></h1>
+<img src="https://image.shutterstock.com/image-vector/bakery-chocolate-sweet-city-shop-260nw-626687366.jpg">
+<h2><%=@vendor.name%>'s Sweets: </h2>
+------------------------------- <br>
+<% @vendor.sweets.each do |sweet|%>
+<%= link_to sweet.name, sweet_path(sweet) %><br>
+<% end %>
+-------------------------------<br>
+<br><br>
+<h3><%= link_to "Create another vendor sweet", new_vendor_sweet_path%></h3>
+-------------------------------
+<h3><%= link_to "View all Vendors", vendors_path%></h3>
+-------------------------------
+<h3><%= link_to "View all Sweets", sweets_path%></h3>

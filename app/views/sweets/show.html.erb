@@ -1,0 +1,7 @@
+<h1><%= @sweet.name %></h1>
+<%= link_to 'Index' , sweets_path %><br>
+<%= link_to 'New Pairing' , new_vendor_sweet_path %>
+<h2>Vendors</h2>
+<% @sweet.vendor_sweets.each do |vs| %>
+    <%= link_to vs.vendor.name , vendor_path(vs.vendor) %>
+    <% end %>

@@ -1,0 +1,7 @@
+<h2><%= @vendor.name %></h2>
+<%= link_to 'New Sale' , new_vendor_sweet_path %><br>
+
+<!-- I forgot to make this @vendor.sweets , please don't hold that against me too much -->
+<% @vendor.vendor_sweets.each do |vs| %>
+    <%= link_to vs.sweet.name , sweet_path(vs.sweet) %>: $<%= vs.price %><br>
+    <% end %>

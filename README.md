@@ -29,6 +29,7 @@ We've been building an application where we can see all of the sweets that vendo
 
 1. Start with creating the `VendorSweet` model. It should have an attribute for the price at which the sweet will be sold by the vendor (use an integer data type for this column: we'll treat the numbers in it as the price, in cents). We'll need to make sure to also have the appropriate migration to our schema for this to work. It is always suggested to test that our migration worked, so go into the console and try to create your first `VendorSweet` with a given `Sweet`, `Vendor`, and price.
 
+
 2. A user should be able to visit a page with a form that will let them choose a `Vendor` and a `Sweet` and create a `VendorSweet` when they submit that form. The form should include a dropdown to select a vendor, another dropdown to select its sweet, and an input for the price. We'd like the route to this form to follow the RESTful convention (as well as the route that it should submit its form values to). Once the `VendorSweet` is created, we'd like to go to the selected vendor's show page.
 
 3. Let's add some validations. `VendorSweets` should *not* be able to be saved if:

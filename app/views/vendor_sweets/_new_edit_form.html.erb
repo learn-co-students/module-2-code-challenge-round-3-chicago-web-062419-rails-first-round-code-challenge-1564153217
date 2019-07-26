@@ -1,0 +1,20 @@
+<div>
+    <% if @vendor_sweet.errors.any? %>
+        <% @vendor_sweet.errors.full_messages.each do |msg| %>
+            <p><%= msg %></p>
+        <% end %>
+    <% end %>
+</div>
+
+<div>
+    <%= form_for @vendor_sweet do |f| %>
+        <%= f.collection_select :vendor_id , Vendor.all , :id , :name %><br>
+        <%= f.collection_select :sweet_id , Sweet.all , :id , :name %></br>
+
+        <%= f.label :price %>
+        <%= f.text_field :price %><br>
+
+
+        <%= f.submit 'Submit'%>
+        <% end %>
+</div>

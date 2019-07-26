@@ -1,0 +1,13 @@
+<h1>Register a new Vendor Sweet</h1>
+
+<%= form_for(@vendorsweet) do |f| %>
+  
+	<%= f.label 'Price:' %>
+	<%= f.number_field :price %>
+    Vendor: <%= f.collection_select :vendor_id, Vendor.all, :id, :name %>
+    Sweet: <%= f.collection_select :sweet_id, Sweet.all, :id, :name %>
+	<%= f.submit %>
+<% end %>
+<%= flash[:message] %>
+<br>
+<%= link_to "Go Back", vendorsweets_path %><br>
